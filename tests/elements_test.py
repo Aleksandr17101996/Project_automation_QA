@@ -80,7 +80,8 @@ class TestElements:
             web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
             web_table_page.open()
             count = web_table_page.select_up_to_some_rows()
-            assert count == [5, 10, 20, 25, 50, 100]
+            assert count == [5, 10, 20, 25, 50, 100], 'The number of rows in the table has not been changed or has ' \
+                                                      'changed incorrectly '
 
 
 

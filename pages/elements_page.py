@@ -150,6 +150,8 @@ class WebTablePage(BasePage):
         list_rows = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
         return len(list_rows)
 
+    def
+
 
 
 

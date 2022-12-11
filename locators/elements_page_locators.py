@@ -48,6 +48,8 @@ class WebTablePageLocators:
     #update
     UPDATE_BUTTON = (By.CSS_SELECTOR, 'span[title="Edit"]')
 
+class
+
 
 
 
