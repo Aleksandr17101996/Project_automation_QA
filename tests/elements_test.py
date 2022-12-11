@@ -65,8 +65,6 @@ class TestElements:
             web_table_page.search_some_person(lastname)
             age = web_table_page.update_person_info()
             row = web_table_page.check_search_person()
-            print(age)
-            print(row)
             assert age in row, "the person card has not been change"
 
         def test_web_table_delete_person(self, driver):
@@ -77,6 +75,13 @@ class TestElements:
             web_table_page.delete_person()
             text = web_table_page.check_delete()
             assert text == 'No rows found'
+
+        def test_web_table_change_count_row(self, driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            count = web_table_page.select_up_to_some_rows()
+            assert count == [5, 10, 20, 25, 50, 100]
+
 
 
 
