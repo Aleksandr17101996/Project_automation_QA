@@ -6,6 +6,7 @@ from faker import Faker
 faker_ru = Faker('ru_RU')
 Faker.seed()
 
+
 def generated_persone():
     yield Person(
         full_name=faker_ru.first_name() + " " + faker_ru.last_name() + " " + faker_ru.middle_name(),
@@ -18,3 +19,10 @@ def generated_persone():
         current_address=faker_ru.address(),
         permanent_address=faker_ru.address(),
     )
+
+def generated_file():
+    path = rf'C:\projects\Project_automation_QA\filetest{random.randint(0, 999)}.txt'
+    file = open(path, 'w+')
+    file.write(f'Hello World{random.randint(0, 999)}')
+    file.close()
+    return file.name, path
