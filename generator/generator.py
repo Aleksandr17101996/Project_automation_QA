@@ -18,7 +18,9 @@ def generated_persone():
         email=faker_ru.email(),
         current_address=faker_ru.address(),
         permanent_address=faker_ru.address(),
+        mobile=faker_ru.msisdn(),
     )
+
 
 def generated_file():
     path = rf'C:\projects\Project_automation_QA\filetest{random.randint(0, 999)}.txt'
